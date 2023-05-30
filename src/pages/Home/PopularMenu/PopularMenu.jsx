@@ -5,6 +5,7 @@ import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 const PopularMenu = () => {
     const [menu, setMenu] = useState([]);
+    
     useEffect(() => {
         fetch('menu.json')
         .then(res => res.json())
