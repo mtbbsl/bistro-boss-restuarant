@@ -20,7 +20,7 @@ const Menu = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | Menu</title>
+        <title>Bistro Boss | Our Menu</title>
       </Helmet>
       <Cover
         img={menuImg}
@@ -37,7 +37,7 @@ const Menu = () => {
       {/* dessert menu items */}
       <MenuCategory
         items={desserts}
-        title={"Desserts"}
+        title={"dessert"}
         img={dessertImg}
         msg={
           "Decadent Dessert Delights: Indulge your sweet tooth with our heavenly selection of desserts. From rich chocolate creations to delicate fruit-infused delights, experience a symphony of flavors that will leave you craving for more."
@@ -46,7 +46,7 @@ const Menu = () => {
       {/* pizza menu items */}
       <MenuCategory
         items={pizzas}
-        title={"Pizzas"}
+        title={"pizza"}
         img={pizzaImg}
         msg={
           "Delicious Pizza Delights: A tantalizing array of mouthwatering pizzas crafted with the finest ingredients, baked to perfection, and bursting with flavor. Savor the ultimate pizza experience at our restaurant!"
@@ -55,7 +55,7 @@ const Menu = () => {
       {/* soup menu items */}
       <MenuCategory
         items={soups}
-        title={"Soups"}
+        title={"soup"}
         img={soupImg}
         msg={
           "Soul-Warming Soup Sensations: Dive into a comforting bowl of our expertly crafted soups, simmered to perfection. From hearty classics to exotic blends, savor the warmth and nourishment that will embrace your taste buds."
@@ -64,7 +64,7 @@ const Menu = () => {
       {/* salad menu items */}
       <MenuCategory
         items={salads}
-        title={"Salads"}
+        title={"salad"}
         img={saladImg}
         msg={
           "Fresh and Vibrant Salad Creations: Immerse yourself in a symphony of crisp, colorful ingredients expertly tossed together. Discover a medley of flavors and textures that will invigorate your palate and leave you feeling refreshed."
