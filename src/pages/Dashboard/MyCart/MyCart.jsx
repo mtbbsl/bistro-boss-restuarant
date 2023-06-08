@@ -8,7 +8,7 @@ const MyCart = () => {
   // google: how does reduce work?
   const total = cart.reduce((sum, item) => item.price + sum, 0);
 
-  const handleDelete = item => {
+  const handleDelete = (item) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -20,18 +20,18 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/carts/${item._id}`, {
-            method: 'DELETE'
+          method: "DELETE",
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                refetch();
-                Swal.fire("Deleted!", "Your file has been deleted.", "success")
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              refetch();
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
-        })
+          });
       }
-    })
-  }
+    });
+  };
 
   return (
     <div className="w-full px-4">
@@ -68,7 +68,12 @@ const MyCart = () => {
                 <td>{item.name}</td>
                 <td className="text-end">${item.price}</td>
                 <td>
-                  <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-800 text-white"><FaTrashAlt></FaTrashAlt></button>
+                  <button
+                    onClick={() => handleDelete(item)}
+                    className="btn btn-ghost bg-red-800 text-white"
+                  >
+                    <FaTrashAlt></FaTrashAlt>
+                  </button>
                 </td>
               </tr>
             ))}
